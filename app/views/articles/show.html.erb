@@ -1,0 +1,15 @@
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-6 col-xs-offset-3">
+      <h1><%= @article.title %></h1>
+      <%= link_to "Edit", edit_article_path(@article)  %>
+      <%= link_to "Delete", article_path(@article), method: :delete, data: { confirm: "Are you sure?" } %>
+      <%= markdown(@article.content) %>
+    </div>
+  </div>
+</div>
+
+
+
