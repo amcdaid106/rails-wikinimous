@@ -1,22 +1,32 @@
 
-<div class="container text-center">
+
+<div class="container">
   <div class="row">
-    <div class="col-xs-12">
-      <h1>All Articles</h1>
+    <div class="col-sm-8 col-sm-offset-2">
+      <article>
+        <% @articles.each do |article| %>
+          <h2><%= link_to article.title, article_path(article) %></h2>
+          <%= article.content %>
+        <% end %>
+      </article>
     </div>
   </div>
 </div>
 
-<div class="container text-center">
-  <div class="row">
-    <div class="col-xs-12">
-      <% @articles.each do |article| %>
-        <h3><%= link_to article.title, article_path(article)  %></h3>
-      <% end %>
+
+
+<!--
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-8 col-sm-offset-2">
+
+        <article>
+          <h2><a href="/articles/304169">Exclusive human-resource core</a></h2>
+          Velit esse voluptate sed labore numquam non optio. Voluptatem aut facere dolorem sit qui facilis dolo
+        </article>
+
+      </div>
     </div>
   </div>
-</div>
-
-
-
-
+ -->
